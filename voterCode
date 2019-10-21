@@ -1,0 +1,20 @@
+#Print welcome message 
+#Input functions ask user for name, email, and voter registration status
+
+print("Welcome to the Voter Registration Project!")
+name = input("Please enter your name: ")
+
+email = input("Please enter your email: ")
+
+print("""Thanks! Now we need your registration status. Enter 1 if you are already registered,  
+2 if you need to register, 3 if don't know your registration status, and 4 if you can't register today.""")
+
+status = input("Please enter your registration status: ")
+
+print("Thanks!")
+
+f = open("voterData.txt", "w")
+
+f.write(name + "," + email + "," + status + "\n")
+
+f.close() 
